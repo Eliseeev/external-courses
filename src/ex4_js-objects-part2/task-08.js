@@ -12,4 +12,5 @@ function lowReg(string) {
   }
   return result;
 }
+
 module.exports = lowReg;

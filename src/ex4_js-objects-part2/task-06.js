@@ -8,4 +8,5 @@ function cap(string) {
   }
   return capElement.trim();
 }
+
 module.exports = cap;

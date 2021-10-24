@@ -1,5 +1,5 @@
 function emptyObj() {
-  const funnyObj = Object.create(null);
-  return funnyObj;
+  return Object.create(null);
 }
+
 module.exports = emptyObj;

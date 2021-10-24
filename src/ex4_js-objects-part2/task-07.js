@@ -9,4 +9,5 @@ function cut(str, num) {
   }
   return sum;
 }
+
 module.exports = cut;

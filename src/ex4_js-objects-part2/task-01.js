@@ -1,4 +1,5 @@
 function nameObj(name, Obj) {
-  return Obj.__proto__[name];
+  return Object.getPrototypeOf(Obj)[name];
 }
+
 module.exports = nameObj;

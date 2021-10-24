@@ -1,9 +1,15 @@
 function addWord(str1, str2, num) {
-  // eslint-disable-next-line no-param-reassign
-  num = 2;
-  const mass = str1.split(' ');
-  mass.splice(num, 0, str2);
-  const fullSent = mass.join(' ');
-  return fullSent;
+  const words = str1.split(' ');
+  const newWords = words.reduce((acc, word, index) => {
+    if (num + 1 === index) {
+      acc.push(str2);
+      acc.push(word);
+    } else {
+      acc.push(word);
+    }
+    return acc;
+  }, []);
+  return newWords.join(' ');
 }
+
 module.exports = addWord;
