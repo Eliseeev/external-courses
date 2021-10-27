@@ -1,26 +1,25 @@
 div {
-    height: 600px;
-    width: 600px;
+    height: 300px;
+    width: 300px;
     margin-top: 50px;
 }
 
 .first_way {
     background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1782841188222961062/A927F99947AF8EE57C6CE783D0E7FB322A8816EB/?imw=640&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
     border-style: solid dotted none dotted;
-    color: red;
+    color: rgb(216, 10, 243);
 }
 
 .second_way {
-    border-style: outset;
-    border-color: rgb(190, 9, 236);
-    border-width: 10px;
-    background-image: url(https://dzbc.org/d/1091/ATTI67.jpg)
+    border: 5px solid rgb(17, 0, 15);
+    background: rgb(15, 0, 0);
+    outline: rgb(216, 10, 243) solid 5px;
 }
 
 .third_way {
-    border-top: 5px ridge plum;
-    border-left: 5px inset green;
-    border-right: 5px outset blue;
-    border-bottom: 5px groove red;
-    background-color: rgb(20, 83, 30);
+    color: blue;
+    background-color: rgb(30, 3, 73);
+    box-shadow: 0 0 50px 5px;
+    margin: 10px;
+    margin-top: 50px;
 }
