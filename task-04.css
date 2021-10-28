@@ -1,0 +1,29 @@
+.description {
+    background-color: #b8e0f3fb;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+.Paragraph_1 {
+    background: #c2b7f0;
+    width: 100%;
+}
+
+.Paragraph_2 {
+    width: 100%;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.PreTag {
+    color: rgb(72, 7, 224);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info {
+    color: rgb(112, 12, 116);
+}
+
+.megaImage {
+    background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614341527_28-p-fon-abstraktsiya-svetlii-29.jpg);
+}
