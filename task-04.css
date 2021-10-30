@@ -1,0 +1,65 @@
+div {
+    height: 200px;
+    width: 400px;
+    background-color: #60B88D;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Первый способ */
+
+.one {
+    box-shadow: 5px 5px rgb(151, 202, 173), 10px 10px rgb(188, 226, 205);
+}
+
+/* Второй способ */
+
+.two {
+    position: relative;
+}
+
+.two::before, .two::after {
+    position: absolute;
+    content: "";
+    height: 200px;
+    width: 400px;
+    z-index: -1;
+}
+
+.two::after {
+    left: 5px;
+    top: 5px;
+    background-color: rgb(144, 205, 175);
+}
+
+.two::before {
+    left: 10px;
+    top: 10px;
+    background-color: rgb(191, 227, 209);
+}
+
+/* Третий способ */
+
+.three {
+    position: relative;
+}
+
+.three::after {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(144, 205, 175);
+    box-shadow: 5px 5px rgb(191, 227, 209);
+}
