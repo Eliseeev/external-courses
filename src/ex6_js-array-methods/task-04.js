@@ -8,4 +8,5 @@ function filter(array, callback) {
   }
   return result;
 }
+
 module.exports = filter;

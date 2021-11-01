@@ -7,4 +7,5 @@ function some(array, callback) {
 
   return false;
 }
+
 module.exports = some;

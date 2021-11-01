@@ -1,4 +1,4 @@
-function copy(array, begin = 0, end = 0) {
+function cutAreaArray(array, begin = 0, end = 0) {
   const start = (begin >= 0) ? begin : array.length + begin;
 
   let endTo = end || array.length;
@@ -19,4 +19,5 @@ function copy(array, begin = 0, end = 0) {
   }
   return [];
 }
-module.exports = copy;
+
+module.exports = cutAreaArray;

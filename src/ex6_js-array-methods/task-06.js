@@ -12,4 +12,5 @@ function reduce(array, callback, initialValue) {
   }
   return previousValue;
 }
+
 module.exports = reduce;

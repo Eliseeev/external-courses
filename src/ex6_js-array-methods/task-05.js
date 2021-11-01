@@ -8,4 +8,5 @@ function map(array, callback) {
 
   return newArray;
 }
+
 module.exports = map;
