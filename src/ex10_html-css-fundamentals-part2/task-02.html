@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="task-02.css" />
+  </head>
+  <body>
+    <form action="http://httpbin.org/post" method="get">
+      <fieldset>
+        <legend>Personal data</legend>
+        <p>
+          <label for="surname">Surname</label>
+          <input id="surname" type="text" />
+        </p>
+        <p>
+          <label>First name</label>
+          <input id="firstName" type="text" />
+        </p>
+        <p>
+          <label for="mdName">Middle Name</label>
+          <input id="mdName" type="text" />
+        </p>
+        <label for="who">You are</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+        <p>
+          <label for="age">Age</label>
+          <input id="age" type="number" min="18" max="101" />
+        </p>
+
+        <p>
+          <label for="country">Country of Residence</label>
+          <select id="country">
+            <option value="abkhazia">Abkhazia</option>
+            <option value="russian federation">Russian Federation</option>
+          </select>
+        </p>
+        <p>
+          <label for="city">City</label>
+          <input id="city" type="checkbox" />Ryazan
+          <input name="city" type="checkbox" />Moscow
+        </p>
+        <p>
+          <label for="photo">Photography</label>
+          <input id="photo" type="file" />
+        </p>
+        <hr />
+        <label for="title">Title</label>
+        <select id="title" multiple>
+          <optgroup label="Technologies">
+            <option value="web master">Web Master</option>
+            <option value="database administrator">
+              Database Administrator
+            </option>
+            <option value="computer-aided design">Computer-aided design</option>
+          </optgroup>
+          <optgroup label="Finance">
+            <option value="economic Planning">Economic Planning</option>
+            <option value="management accounting">Management accounting</option>
+            <option value="budgeting and planning">
+              Budgeting and planning
+            </option>
+          </optgroup>
+        </select>
+        <p>
+          <label for="salary">Salary</label>
+          <input
+            id="salary"
+            min="0"
+            max="10000"
+            step="500"
+            value="50000"
+            type="range"
+          />
+        </p>
+        <p>
+          <textarea
+            name="comment"
+            cols="35"
+            rows="12"
+            id="text"
+            placeholder="Tell about yourself..."
+          ></textarea>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Contact Information</legend>
+        <p>
+          <label for="site">Site</label>
+          <input id="site" type="url" />
+        </p>
+        <p>
+          <label for="mail">Email</label>
+          <input id="mail" type="email" />
+        </p>
+        <p>
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel" />
+        </p>
+      </fieldset>
+      <p>
+        <label for="pswd">Password</label>
+        <input required id="pswd" type="password" />
+      </p>
+      <p>
+        <input type="submit" name="submit" value="Отправить" />
+        <input type="reset" name="reset" value="Сбросить" />
+      </p>
+    </form>
+  </body>
+</html>
