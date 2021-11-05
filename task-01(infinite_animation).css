@@ -1,0 +1,45 @@
+body {
+    width: 100vh;
+    height: 29vw;
+    background: linear-gradient(to bottom left, rgb(115, 211, 155), rgb(77, 79, 206));
+}
+
+div {
+    margin-left: 500px;
+    margin-top: 250px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 70% 15%, rgb(255, 136, 0), rgb(83, 0, 139));
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    animation-direction: alternate-reverse;
+    animation-name: go;
+}
+
+@keyframes go {
+    0% {
+        background: radial-gradient(circle at 70% 15%, rgb(255, 136, 0), rgb(83, 0, 139));
+    }
+    15% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    30% {
+        background: radial-gradient(circle at 70% 15%, rgb(89, 241, 59), rgb(236, 53, 197));
+    }
+    45% {
+        width: 322px;
+        height: 232px;
+        clip-path: polygon(39% 60%, 48% 0, 83% 49%, 50% 91%, 4% 79%, 16% 58%, 10% 20%);
+    }
+    60% {
+        transform: rotate(125deg);
+        animation-duration: 2.3s
+    }
+    75% {
+        background: radial-gradient(circle at 70% 15%, rgb(186, 241, 59), rgb(82, 14, 145));
+    }
+    100% {
+        border-radius: 50%;
+    }
+}
