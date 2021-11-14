@@ -1,7 +1,7 @@
 body {
     width: 100vh;
     height: 29vw;
-    background: linear-gradient(to bottom left, rgb(115, 211, 155), rgb(77, 79, 206));
+    background: black;
 }
 
 div {
@@ -21,16 +21,17 @@ div {
     0% {
         background: radial-gradient(circle at 70% 15%, rgb(255, 136, 0), rgb(83, 0, 139));
     }
-    15% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    10% {
+        clip-path: inset(5% 5% 5% 5%);
+        border-radius: 0%;
     }
-    30% {
+    20% {
         background: radial-gradient(circle at 70% 15%, rgb(89, 241, 59), rgb(236, 53, 197));
     }
     45% {
         width: 322px;
         height: 232px;
-        clip-path: polygon(39% 60%, 48% 0, 83% 49%, 50% 91%, 4% 79%, 16% 58%, 10% 20%);
+        transform: skew(35deg, 25deg);
     }
     60% {
         transform: rotate(125deg);

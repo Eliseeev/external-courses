@@ -1,94 +1,24 @@
 body {
-    width: 100vh;
-    height: 33vw;
-    background: linear-gradient(to top right, rgb(180, 252, 165), rgb(171, 5, 248));
-}
-
-.loader {
-    margin-left: 500px;
-    margin-top: 200px;
-    width: 100px;
-    height: 100px;
+    height: 100vh;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    color: white;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background: radial-gradient(circle at 70% 15%, aqua, darkblue);
-    animation-iteration-count: infinite;
-    animation-duration: 5.5s;
+    border: 10px solid rgba(80, 138, 63, 0.5);
+    border-left-color: rgba(80, 138, 63, 0.95);
     animation-direction: alternate-reverse;
-    animation-name: load;
+    animation: load linear infinite;
+    animation-duration: 4s;
 }
 
 @keyframes load {
-    0% {
-        transform: rotate(0deg);
-        text-align: center;
-        padding-top: 0.2em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    50% {
-        background: radial-gradient(circle at 70% 15%, rgb(223, 144, 226), rgb(111, 2, 133));
-        height: 100px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        animation-duration: 0.3s;
-    }
-    70% {
-        font-family: 'Times New Roman', Times, serif;
-        width: 1000px;
-        height: 500px;
-        font-size: 150px;
-        transform: rotate(164deg);
-        clip-path: ellipse(55% 11% at 43% 50%);
-    }
-    75% {
-        font-family: 'Colonna MT', sans-serif;
-        width: 800px;
-        height: 350px;
-        font-size: 230px;
-        clip-path: polygon(0 0, 35% 55%, 100% 100%);
-    }
-    65% {
-        font-family: 'Times New Roman', Times, serif;
-        transform: rotate(240deg);
-        clip-path: polygon(45% 7%, 86% 10%, 100% 35%, 100% 70%, 61% 65%, 40% 89%, 0 89%, 13% 66%, 1% 21%, 31% 29%);
-        text-transform: lowercase;
-        margin-left: 300px;
-    }
-    60% {
-        font-family: 'Jokerman', sans-serif;
-        transform: rotate(91deg);
-        width: 500px;
-        height: 20px;
-        font-size: 90px;
-        margin-left: 300px;
-        clip-path: polygon(59% 35%, 37% 45%, 60% 48%, 25% 29%, 29% 25%, 60% 16%, 36% 61%, 32% 80%, 72% 82%, 73% 59%, 59% 61%, 94% 35%, 15% 46%);
-    }
-    80% {
-        transform: rotate(-240deg);
-        font-family: 'Ink Free', serif;
-        text-transform: uppercase;
-        width: 90px;
-        clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
-        animation-duration: 0.3s;
-    }
-    90% {
-        font-family: 'MT Extra', serif;
-        width: 380px;
-        background: radial-gradient(circle at 70% 15%, rgb(143, 243, 193), rgb(187, 125, 74));
-    }
     100% {
-        background: radial-gradient(circle at 70% 15%, aqua, darkblue);
-        transform: rotate(-360deg);
-        border-radius: 66%;
-        width: 75px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        transform: rotate(360deg);
     }
 }

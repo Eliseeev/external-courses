@@ -33,6 +33,6 @@ body {
         left: 10px;
     }
     to {
-        left: calc(100% - 59px);
+        left: calc(100% - 60px);
     }
 }
