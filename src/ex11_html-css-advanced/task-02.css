@@ -1,0 +1,39 @@
+.name {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.surname {
+    width: 170px;
+    margin-left: 460px;
+    margin-top: 150px;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .2s linear;
+    font-size: 10px;
+    color: rgb(153, 153, 153);
+}
+
+input {
+    margin-top: 15px;
+    border: 1px solid rgb(88, 87, 87);
+    padding: 4px;
+}
+
+input:invalid+label {
+    top: 3px;
+    opacity: 0;
+}
+
+input:valid+label {
+    opacity: 1;
+}
+
+input:focus+label {
+    color: rgb(0, 162, 255);
+}
