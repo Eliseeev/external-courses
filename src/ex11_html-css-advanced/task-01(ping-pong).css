@@ -39,6 +39,7 @@ main {
     from {
         left: 10px;
     }
+
     to {
         left: calc(100% - 60px);
     }
