@@ -1,0 +1,12 @@
+.table tr:nth-child(odd) {
+    background-color: #e3eaf4;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f5fa;
+}
+
+.table tr:hover {
+    background-color: #e2e5ea;
+    cursor: pointer;
+}

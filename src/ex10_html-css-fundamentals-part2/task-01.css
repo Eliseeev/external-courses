@@ -1,0 +1,20 @@
+.image {
+    height: 60vh;
+    border-radius: 50%;
+}
+
+.blockImg {
+    transform: rotate(28deg);
+    border-bottom-left-radius: 49%;
+    border-bottom-right-radius: 74%;
+    height: 300px;
+    width: 380px;
+}
+
+.blockImg, .blockImg2 {
+    overflow: hidden;
+}
+
+.blockImg2 {
+    transform: rotate(-81deg) translateY(62%) translateX(33%)
+}
