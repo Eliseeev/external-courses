@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dropMenu.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="left-side">
+        <img src="./menu.svg" alt="menu" />
+        <h1>Awesome Kanban Board</h1>
+      </div>
+
+      <div class="right-side">
+        <button class="new-list-btn">
+          <img src="./add-list.svg" alt="add" />
+          Create new list
+        </button>
+
+        <div class="user-menu">
+          <img class="avatar" src="./user-avatar.svg" alt="menu" />
+          <button aria-expanded="false" onclick="toggleDropDown()">
+            <img src="./menu-arrow.svg" alt="arrow" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+
+    <footer>
+      <h2 class="active">Active task:&lt;N&gt;</h2>
+      <div class="finish">Finished tasks:&lt;M&gt;</div>
+      <h2 class="kanban">Kanban board by &lt;NAME&gt;, &lt;YEAR&gt;</h2>
+    </footer>
+    <script src="dropMenu.js"></script>
+  </body>
+</html>

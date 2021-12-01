@@ -1,0 +1,135 @@
+:root {
+    --main-blue: #0067A3;
+    --main-white: #ffffff;
+    --main-light-blue: #0079BF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-light-blue);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--main-blue);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-blue);
+    margin-top: auto;
+    padding: 17px 24px 17px 67px;
+    box-sizing: border-box;
+    color: var(--main-white);
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+    width: 384px;
+    margin: 5px 0 5px 14px;
+}
+
+.left-side h1 {
+    margin: 0 0 0 8px;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+    color: var(--main-white)
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.new-list-btn {
+    display: flex;
+    width: 181px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    background-color: var(--main-white);
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    border: none;
+    cursor: pointer;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.avatar {
+    margin-left: 50px;
+}
+
+.user-menu button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.user-menu button img {
+    transition: 0.15s ease-in-out;
+}
+
+.dropdown-menu {
+    position: absolute;
+    width: 200px;
+    background-color: var(--main-white);
+    top: 50px;
+    right: 5px;
+    border-radius: 15px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.dropdown-menu ul li {
+    margin: 6px;
+    cursor: pointer;
+}
+
+.dropdown-menu ul li:active {
+    transform: scale(0.95);
+}
+
+.active {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px
+}
+
+.finish {
+    margin-left: 40px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px
+}
+
+.kanban {
+    margin-left: 480px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px
+}
