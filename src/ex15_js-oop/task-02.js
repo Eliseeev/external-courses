@@ -6,46 +6,109 @@ class ElectricalAppliances {
     this.turnOn = appliance.turnOn;
   }
 }
-const hairdryer = new ElectricalAppliances({
-  name: 'hairdryer',
-  powerConsumption: 1500,
+class Hairdryer extends ElectricalAppliances {
+  constructor(hairdryerConfig) {
+    super(hairdryerConfig);
+    this.name = hairdryerConfig.noise;
+  }
+}
+
+const vitek = new Hairdryer({
+  name: 'vitek',
+  powerConsumption: 1800,
   turnOn: false,
+  noise: 75,
 });
 
-const TV = new ElectricalAppliances({
-  name: 'TV',
-  powerConsumption: 200,
+const dyson = new Hairdryer({
+  name: 'dyson',
+  powerConsumption: 660,
   turnOn: true,
+  noise: 77,
 });
 
-const vacuumCleaner = new ElectricalAppliances({
-  name: 'VacuumCleaner',
-  powerConsumption: 1000,
+class TV extends ElectricalAppliances {
+  constructor(tvConfig) {
+    super(tvConfig);
+    this.name = tvConfig.diagonal;
+  }
+}
+
+const lg = new TV({
+  name: 'lg',
+  powerConsumption: 100,
   turnOn: true,
+  diagonal: 107,
 });
 
-const iron = new ElectricalAppliances({
-  name: 'iron',
-  powerConsumption: 1000,
+class VacuumCleaner extends ElectricalAppliances {
+  constructor(vacuumCleanerConfig) {
+    super(vacuumCleanerConfig);
+    this.name = vacuumCleanerConfig.dustСollector;
+  }
+}
+
+const bq = new VacuumCleaner({
+  name: 'bq',
+  powerConsumption: 1800,
   turnOn: false,
+  dustСollector: 0.8,
 });
 
-const computer = new ElectricalAppliances({
-  name: 'computer',
+class Iron extends ElectricalAppliances {
+  constructor(IronConfig) {
+    super(IronConfig);
+    this.name = IronConfig.soleMaterial;
+  }
+}
+
+const panasonic = new Iron({
+  name: 'panasonic',
+  powerConsumption: 2300,
+  turnOn: true,
+  soleMaterial: 'ceramics',
+});
+
+class Computer extends ElectricalAppliances {
+  constructor(computerConfig) {
+    super(computerConfig);
+    this.name = computerConfig.operatingSystem;
+  }
+}
+
+const apple = new Computer({
+  name: 'apple',
   powerConsumption: 550,
   turnOn: true,
+  operatingSystem: 'macOS',
 });
 
-const toaster = new ElectricalAppliances({
-  name: 'toaster',
-  powerConsumption: 1200,
-  turnOn: false,
-});
+class Toaster extends ElectricalAppliances {
+  constructor(toasterConfig) {
+    super(toasterConfig);
+    this.name = toasterConfig.control;
+  }
+}
 
-const fridge = new ElectricalAppliances({
-  name: 'fridge',
-  powerConsumption: 400,
+const philips = new Toaster({
+  name: 'philips',
+  powerConsumption: 830,
   turnOn: true,
+  control: 'mechanical',
+});
+
+class MicrowaveOven extends ElectricalAppliances {
+  constructor(microWaweConfig) {
+    super(microWaweConfig);
+    this.name = microWaweConfig.cameraVolume;
+  }
+}
+
+const bbk = new MicrowaveOven({
+  name: 'bbk',
+  powerConsumption: 1050,
+  turnOn: false,
+  cameraVolume: 20,
 });
 
 class Room {
@@ -63,16 +126,19 @@ class Room {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 const livingRoom = new Room({
   name: 'livingRoom',
-  appliances: [TV, computer, vacuumCleaner, iron],
+  appliances: [lg, apple, bq, panasonic, dyson],
 });
 
+// eslint-disable-next-line no-unused-vars
 const kitchen = new Room({
   name: 'kitchen',
-  appliances: [toaster, hairdryer, fridge],
+  appliances: [philips, vitek, bbk],
 });
 
+// eslint-disable-next-line no-unused-vars
 class Appartment {
   constructor(rooms) {
     this.rooms = rooms;
@@ -91,6 +157,3 @@ class Appartment {
     return result;
   }
 }
-
-const myHome = new Appartment([livingRoom, kitchen]);
-console.log(myHome.findAppliances('comp'));

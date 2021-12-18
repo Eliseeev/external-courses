@@ -2,14 +2,12 @@ function getRandomRating() {
   return Math.floor(Math.random() * 99) + 1;
 }
 
-// Sweet.js
 function Sweet(name, weight) {
   this.name = name;
   this.weight = weight;
   this.rating = 0;
 }
 
-// Candy.js
 const ratingTasteOfCandies = {
   blackberry: getRandomRating(),
   strawberry: getRandomRating(),
@@ -24,11 +22,11 @@ function Candy(name, weight, flavor) {
 // eslint-disable-next-line func-names
 Candy.prototype.calculate = function () {
   const rating = ratingTasteOfCandies[this.flavor];
+
   if (rating === undefined) throw Error('Нет информации по конфете');
   this.rating = rating;
 };
 
-// Chocolate.js
 const ratingTasteOfChocolate = {
   XL: getRandomRating(),
   L: getRandomRating(),
@@ -44,12 +42,10 @@ function Chocolate(name, weight, size) {
 // eslint-disable-next-line func-names
 Chocolate.prototype.calculate = function () {
   const rating = ratingTasteOfChocolate[this.size];
-  if (rating === undefined) throw Error('Нет информации по чоколадке');
 
+  if (rating === undefined) throw Error('Нет информации по околадке');
   this.rating = rating;
 };
-
-// Gift.js
 
 function Gift(sweets) {
   this.sweets = sweets;
@@ -58,9 +54,11 @@ function Gift(sweets) {
 // eslint-disable-next-line func-names
 Gift.prototype.calculate = function () {
   let totalWeight = 0;
+
   for (let i = 0; i < this.sweets.length; i += 1) {
     totalWeight += this.sweets[i].weight;
   }
+
   return totalWeight;
 };
 
@@ -86,8 +84,5 @@ milk.calculate();
 const black = new Chocolate('black', 56, 'XL');
 black.calculate();
 
+// eslint-disable-next-line no-unused-vars
 const gift = new Gift([apple, strawberry, blackberry, milk, black]);
-
-console.log(gift.calculate());
-console.log(gift.sortByRating());
-console.log(gift.filterByName('berry'));
